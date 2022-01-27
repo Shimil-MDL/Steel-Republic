@@ -1,0 +1,97 @@
+.navbar{
+  backdrop-filter: blur(3px);
+  color: var(--fg);
+  width: 100vw;
+  padding: 10px 50px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo{
+  cursor: pointer;
+  height: 80px;
+}
+.navbar .logo img{
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar .menu-btn{
+    display: none;
+  }
+
+.navbar .menu{
+  --color: #68a3c0;
+  
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+@media(max-width: 500px){
+  .navbar{
+    position: relative;
+    padding: 10px 16px; 
+    z-index: 100;
+  }
+  .navbar .menu-btn{
+    display: block;
+  }
+.navbar .menu{  
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  width: 100%;
+  background: var(--color);
+  
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px 0;
+  
+  transition: all 0.5s;
+  
+/*   font-size: 0.9rem;
+  font-weight: 500; */
+  }
+}
+
+.navbar .menu .items{
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.navbar .menu .items:hover{
+  color: var(--color);
+}
+
+.navbar .menu .spcl-items{
+  color: var(--bg);
+  background: var(--fg);
+  padding: 6px 10px;
+  border-radius: 20px;
+  
+  font-weight: 600;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+.navbar .menu .spcl-items:hover{
+  background: var(--color);
+  color: var(--fg);
+}
+
+.navbar .menu .spcl-items i{
+  font-size: 1rem;
+}
+
+@media(max-width: 500px){
+  .navbar .menu .items, .navbar .menu .items:hover{
+    color: var(--bg);
+  }
+  .navbar .menu .spcl-items, .navbar .menu .spcl-items:hover{
+    background: var(--bg);
+    color: var(--fg);
+  }
+}
