@@ -60,15 +60,15 @@
   }
 }
 
-.navbar .menu .items{
+.navbar .menu a .items{
   cursor: pointer;
   transition: all 0.3s;
 }
-.navbar .menu .items:hover{
+.navbar .menu a .items:hover{
   color: var(--color);
 }
 
-.navbar .menu .spcl-items{
+.navbar .menu a .spcl-items{
   color: var(--bg);
   background: var(--fg);
   padding: 6px 10px;
@@ -82,8 +82,9 @@
   color: var(--fg);
 }
 
-.navbar .menu .spcl-items i{
-  font-size: 1rem;
+.navbar .menu-btn i{
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
 }
 
 @media(max-width: 500px){
